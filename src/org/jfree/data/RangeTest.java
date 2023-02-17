@@ -30,10 +30,7 @@ public class RangeTest {
 	//*********************************************************************
 	// Tests for work to be done section of assignment 
 	
-	// Method 1 - Tests for Combine
-	
-		// TC 1 ... 
-		// TC 2 ... 
+	// Method 1 - Tests for Combine 
 		
 	// Method 2 - Tests for Constrain
 		
