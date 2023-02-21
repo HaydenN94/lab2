@@ -31,116 +31,116 @@ public class DataUtilitiesTest extends TestCase {
 	}
 
 //	// ****** Method 1 - Tests for Calculate Column Total *****************
-//
-//	// Case 1: Column total with all positive values
-//	@Test
-//	public void testCalculateColumnTotalPositiveValues() {
-//		values2D.addValue(1, 0, 0);
-//		values2D.addValue(5, 1, 0);
-//		values2D.addValue(10, 2, 0);
-//		values2D.addValue(15.6, 3, 0);
-//
-//		double expected = 31.6;
-//		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
-//
-//		assertEquals(expected, actualColTotal);
-//	}
-//
-//	// Case 2: Column total with all negative values
-//	@Test
-//	public void testCalculateColumnTotalNegativeValues() {
-//		values2D.addValue(-1, 0, 0);
-//		values2D.addValue(-5, 1, 0);
-//		values2D.addValue(-10.6, 2, 0);
-//		values2D.addValue(-15, 3, 0);
-//
-//		double expected = -31.6;
-//		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
-//
-//		assertEquals(expected, actualColTotal);
-//	}
-//	
-//	// Case 3: Column total with positive and negative values
-//	@Test
-//	public void testCalculateColumnTotalNegativeAndPositiveValues() {
-//		values2D.addValue(-1, 0, 0);
-//		values2D.addValue(-5, 1, 0);
-//		values2D.addValue(-10, 2, 0);
-//		values2D.addValue(16, 3, 0);
-//		values2D.addValue(20, 4, 0);
-//		values2D.addValue(2.7, 5, 0);
-//
-//		double expected = 22.7;
-//		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
-//
-//		assertEquals(expected, actualColTotal);
-//	}
-//	
-//	// Case 4: Test calculate column only calculates requested column 
-//	@Test
-//	public void testCalculateColumnTotalOnlyCalculatesRequestedColumn() {
-//		values2D.addValue(1, 0, 0);
-//		values2D.addValue(5, 1, 0);
-//		values2D.addValue(10, 2, 0);
-//		values2D.addValue(15.6, 3, 0);
-//		values2D.addValue(1, 0, 1);
-//		values2D.addValue(5, 1, 1);
-//		values2D.addValue(10, 2, 1);
-//		values2D.addValue(15.6, 3, 1);
-//
-//		double expected = 31.6;
-//		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
-//
-//		assertEquals(expected, actualColTotal);
-//	}
-//	
-//	// Case 5: Column total with one value totalling 0 
-//	@Test
-//	public void testCalculateColumnTotalOneValueTotallingZero() {
-//		values2D.addValue(0, 0, 0);
-//
-//		double expected = 0;
-//		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
-//
-//		assertEquals(expected, actualColTotal);
-//	}
-//	
-//	// Case 6: Test column total with invalid data returns 0 
-//	@Test
-//	public void testColumnDataInvalidInputReturnsZero(){
-//		values2D.addValue(null, 0, 0);
-//	    double actualColTotal = DataUtilities.calculateRowTotal(values2D, 0);
-//	    
-//	    assertEquals(0.0, actualColTotal);
-//	}
-//	
-//	// Case 7: Column total for row that doesn't exist throws exception  
-//	@Test
-//	public void testCalculateColumnTotalForColumnNotExisitngThrowsException() {
-//		values2D.addValue(0, 0, 0);
-//
-//		try {
-//		DataUtilities.calculateColumnTotal(values2D, 5);
-//	    fail("No exception thrown. The expected outcome was: a thrown "
-//	    		+ "exception of type: InvalidParameterException");
-//		} catch (Exception e) {
-//			assertTrue("Incorrect exception type thrown",  
-//				    e.getClass().equals(IndexOutOfBoundsException.class));
-//		}
-//	}
-//		
-//	// Case 8: Test column total with invalid data object
-//	@Test
-//	public void testColumnTotalWithInvalidDataObjectThrowsException(){
-//	try {
-//	    DataUtilities.calculateColumnTotal(null, 0);
-//	    fail("No exception thrown. The expected outcome was: a thrown "
-//	    		+ "exception of type: InvalidParameterException");
-//	} catch (Exception e){
-//	    assertTrue("Incorrect exception type thrown",  
-//	    e.getClass().equals(InvalidParameterException.class));
-//		}
-//	}
+
+	// Case 1: Column total with all positive values
+	@Test
+	public void testCalculateColumnTotalPositiveValues() {
+		values2D.addValue(1, 0, 0);
+		values2D.addValue(5, 1, 0);
+		values2D.addValue(10, 2, 0);
+		values2D.addValue(15.6, 3, 0);
+
+		double expected = 31.6;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+
+		assertEquals(expected, actualColTotal);
+	}
+
+	// Case 2: Column total with all negative values
+	@Test
+	public void testCalculateColumnTotalNegativeValues() {
+		values2D.addValue(-1, 0, 0);
+		values2D.addValue(-5, 1, 0);
+		values2D.addValue(-10.6, 2, 0);
+		values2D.addValue(-15, 3, 0);
+
+		double expected = -31.6;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+
+		assertEquals(expected, actualColTotal);
+	}
+	
+	// Case 3: Column total with positive and negative values
+	@Test
+	public void testCalculateColumnTotalNegativeAndPositiveValues() {
+		values2D.addValue(-1, 0, 0);
+		values2D.addValue(-5, 1, 0);
+		values2D.addValue(-10, 2, 0);
+		values2D.addValue(16, 3, 0);
+		values2D.addValue(20, 4, 0);
+		values2D.addValue(2.7, 5, 0);
+
+		double expected = 22.7;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+
+		assertEquals(expected, actualColTotal);
+	}
+	
+	// Case 4: Test calculate column only calculates requested column 
+	@Test
+	public void testCalculateColumnTotalOnlyCalculatesRequestedColumn() {
+		values2D.addValue(1, 0, 0);
+		values2D.addValue(5, 1, 0);
+		values2D.addValue(10, 2, 0);
+		values2D.addValue(15.6, 3, 0);
+		values2D.addValue(1, 0, 1);
+		values2D.addValue(5, 1, 1);
+		values2D.addValue(10, 2, 1);
+		values2D.addValue(15.6, 3, 1);
+
+		double expected = 31.6;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+
+		assertEquals(expected, actualColTotal);
+	}
+	
+	// Case 5: Column total with one value totalling 0 
+	@Test
+	public void testCalculateColumnTotalOneValueTotallingZero() {
+		values2D.addValue(0, 0, 0);
+
+		double expected = 0;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+
+		assertEquals(expected, actualColTotal);
+	}
+	
+	// Case 6: Test column total with invalid data returns 0 
+	@Test
+	public void testColumnDataInvalidInputReturnsZero(){
+		values2D.addValue(null, 0, 0);
+	    double actualColTotal = DataUtilities.calculateRowTotal(values2D, 0);
+	    
+	    assertEquals(0.0, actualColTotal);
+	}
+	
+	// Case 7: Column total for row that doesn't exist throws exception  
+	@Test
+	public void testCalculateColumnTotalForColumnNotExisitngThrowsException() {
+		values2D.addValue(0, 0, 0);
+
+		try {
+		DataUtilities.calculateColumnTotal(values2D, 5);
+	    fail("No exception thrown. The expected outcome was: a thrown "
+	    		+ "exception of type: InvalidParameterException");
+		} catch (Exception e) {
+			assertTrue("Incorrect exception type thrown",  
+				    e.getClass().equals(IndexOutOfBoundsException.class));
+		}
+	}
+		
+	// Case 8: Test column total with invalid data object
+	@Test
+	public void testColumnTotalWithInvalidDataObjectThrowsException(){
+	try {
+	    DataUtilities.calculateColumnTotal(null, 0);
+	    fail("No exception thrown. The expected outcome was: a thrown "
+	    		+ "exception of type: InvalidParameterException");
+	} catch (Exception e){
+	    assertTrue("Incorrect exception type thrown",  
+	    e.getClass().equals(InvalidParameterException.class));
+		}
+	}
 	
 	
 	// ****** Method 2 - Tests for Calculate Row Total *****************
@@ -239,7 +239,7 @@ public class DataUtilitiesTest extends TestCase {
 	try {
 	    DataUtilities.calculateRowTotal(null, 0);
 	    fail("No exception thrown. The expected outcome was: a thrown "
-	    		+ "exception of type: IllegalArgumentException");
+	    		+ "exception of type: InvalidParameterException");
 	} catch (Exception e){
 	    assertTrue("Incorrect exception type thrown",  
 	    e.getClass().equals(InvalidParameterException.class));
@@ -255,300 +255,279 @@ public class DataUtilitiesTest extends TestCase {
 	    assertEquals("Calculate row total: Invalid input should return zero ", 0.0, actualRowTotal);
 	}
 	
-//	// ****** Method 3 - Tests for Create Number Array *****************
-//
-//	// Case 1: Test creating an empty number array 
-//	@Test
-//	public void testCreateNumberArrayWithEmptyArray() {
-//		double[] values = new double[] {};
-//		Number[] numberArr = DataUtilities.createNumberArray(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(0, numberArr.length);
-//	}
-//	
-//	// Case 2: Testing creating number array with a single value
-//	@Test
-//	public void testCreateNumberArrayWithSingleValue() {
-//		double[] values = new double[] {0.0};
-//		Number[] numberArr = DataUtilities.createNumberArray(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for(int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i], numberArr[i]);
-//		}
-//	}
-//	
-//	// Case 3: Testing creating number array with positive values 
-//	@Test
-//	public void testCreateNumberArrayWithMultiplePositiveValues() {
-//		double[] values = new double[] {0.0, 1.0, 2.0, 3.0};
-//		Number[] numberArr = DataUtilities.createNumberArray(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for(int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i], numberArr[i]);
-//		}
-//	}
-//	
-//	// Case 4: Testing creating number array with negative values 
-//	@Test
-//	public void testCreateNumberArrayWithMultipleNegativeValues() {
-//		double[] values = new double[] {-1.0, -2.0, -3.0, -4.0};
-//		Number[] numberArr = DataUtilities.createNumberArray(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for(int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i], numberArr[i]);
-//		}
-//	}
-//	
-//	// Case 5: Testing creating number array with negative and positive values 
-//	@Test
-//	public void testCreateNumberArrayWithMultipleNegativeAndPositiveValues() {
-//		double[] values = new double[] {1.0, -2.0, 3.0, -4.0};
-//		Number[] numberArr = DataUtilities.createNumberArray(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for(int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i], numberArr[i]);
-//		}
-//	}
-//	
-//	// Case 6: Testing creating a number array with null object throws Invalid Parameter Exception
-//	@Test
-//	public void testCreateNumberArrayWithNullObjectThrowsException() {
-//		try {
-//			DataUtilities.createNumberArray(null);
-//			fail("No exception thrown. The expected outcome was: a thrown "
-//		    		+ "exception of type: InvalidParameterException");
-//		} catch (Exception e) {
-//			assertTrue("Incorrect exception type thrown",  
-//				    e.getClass().equals(InvalidParameterException.class));
-//		}
-//	}
-//	
-//
-//	// ****** Method 4 - Tests for Create Number Array 2D *****************
-//
-//	// Case 1: Test creating an empty number array 
-//	@Test
-//	public void testCreate2DNumberArrayWithEmptyArray() {
-//		double[][] values = new double[][] {{}, {}};
-//		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(2, numberArr.length);
-//	}
-//	
-//	// Case 2: Test creating 2D number array with multiple positive values 
-//	@Test
-//	public void testCreate2DNumberArrayWithMultiplePositiveValues() {
-//		double[][] values = new double[][] {{0.0, 1.0, 2.0}, {3.0, 4.0, 5.0}};
-//		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for (int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i].length, numberArr[i].length);
-//			for (int j = 0; j < numberArr[i].length; j++) {
-//				assertEquals(values[i][j], numberArr[i][j]);
-//			}
-//		}
-//	}
-//	
-//	// Case 3: Test creating 2D number array with multiple negative values 
-//	@Test
-//	public void testCreate2DNumberArrayWithNegativeValues() {
-//		double[][] values = new double[][] {{-1.0, -2.0}, {-3.0, -4.0, -5.0}};
-//		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for (int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i].length, numberArr[i].length);
-//			for (int j = 0; j < numberArr[i].length; j++) {
-//				assertEquals(values[i][j], numberArr[i][j]);
-//			}
-//		}
-//	}
-//	
-//	// Case 4: Test creating 2D number array with multiple negative values 
-//	@Test
-//	public void testCreate2DNumberArrayWithPositiveAndNegativeValues() {
-//		double[][] values = new double[][] {{1.0, -2.0}, {-3.0, 4.0, -5.0}};
-//		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for (int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i].length, numberArr[i].length);
-//			for (int j = 0; j < numberArr[i].length; j++) {
-//				assertEquals(values[i][j], numberArr[i][j]);
-//			}
-//		}
-//	}
-//	
-//	// Case 5: Test creating 2D number array with multiple positive values 
-//	@Test
-//	public void testCreate2DNumberArrayWithSingleValue() {
-//		double[][] values = new double[][] {{0.0}};
-//		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
-//		
-//		assertNotNull(numberArr);
-//		assertEquals(values.length, numberArr.length);
-//		
-//		for (int i = 0; i < numberArr.length; i++) {
-//			assertEquals(values[i].length, numberArr[i].length);
-//			for (int j = 0; j < numberArr[i].length; j++) {
-//				assertEquals(values[i][j], numberArr[i][j]);
-//			}
-//		}
-//	}
-//	
-//	// Case 6: Testing creating a number array with null object throws Invalid Parameter Exception
-//	@Test
-//	public void testCreate2DNumberArrayWithNullObjectThrowsException() {
-//		try {
-//			DataUtilities.createNumberArray2D(null);
-//			fail("No exception thrown. The expected outcome was: a thrown "
-//		    		+ "exception of type: InvalidParameterException");
-//		} catch (Exception e) {
-//			assertTrue("Incorrect exception type thrown",  
-//				    e.getClass().equals(InvalidParameterException.class));
-//		}
-//	}
-//	
-//	// Method 5 - Tests for Get Cumulative Percentages
-//	
-//	//Case 1: test cumulative percentages for positive number based on javadocs example
-//	@Test
-//	public void testGetCumulativePercentagesPositiveNumbers() {
-//		keyedValues.addValue("0", 5);
-//		keyedValues.addValue("1", 9);
-//		keyedValues.addValue("2", 2);
-//		
-//		DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
-//		
-//		expectedPercentages.addValue("0", 0.3125);
-//		expectedPercentages.addValue("1", 0.875);
-//		expectedPercentages.addValue("2", 1.0);
-//		
-//		KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//
-//		for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
-//			assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
-//			assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
-//		}
-//	}
-//	
-//	//Case 2: test cumulative percentages for positive number based on javadocs example
-//		@Test
-//		public void testGetCumulativePercentagesNegativeNumbers() {
-//			keyedValues.addValue("0", -5);
-//			keyedValues.addValue("1", -9);
-//			keyedValues.addValue("2", -2);
-//			
-//			DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
-//			
-//			expectedPercentages.addValue("0", 0.3125);
-//			expectedPercentages.addValue("1", 0.875);
-//			expectedPercentages.addValue("2", 1.0);
-//			
-//			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//			
-//			for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
-//				assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
-//				assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
-//			}
-//		}
-//		
-//	//Case 3: test cumulative percentages for positive number based on javadocs example
-//		@Test
-//		public void testGetCumulativePercentagesPositiveAndNegativeNumbers() {
-//			keyedValues.addValue("0", 5);
-//			keyedValues.addValue("1", -9);
-//			keyedValues.addValue("2", -2);
-//			
-//			DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
-//			
-//			expectedPercentages.addValue("0", 0.3125);
-//			expectedPercentages.addValue("1", 0.875);
-//			expectedPercentages.addValue("2", 1.0);
-//			
-//			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//			
-//			for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
-//				assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
-//				assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
-//			}
-//	}
-//		
-//	//Case 4: test cumulative percentages based on a larger sample 
-//		@Test
-//		public void testGetCumulativePercentagesLargerSample() {
-//			keyedValues.addValue("0", 5);
-//			keyedValues.addValue("1", 9);
-//			keyedValues.addValue("2", 2);
-//			keyedValues.addValue("3", 5);
-//			keyedValues.addValue("4", 9);
-//			keyedValues.addValue("5", 2);
-//			
-//			DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
-//			
-//			expectedPercentages.addValue("0", 0.15625);
-//			expectedPercentages.addValue("1", 0.4375);
-//			expectedPercentages.addValue("2", 0.5);
-//			expectedPercentages.addValue("3", 0.65625);
-//			expectedPercentages.addValue("4", 0.9375);
-//			expectedPercentages.addValue("5", 1.0);
-//			
-//			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//
-//			for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
-//				assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
-//				assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
-//			}
-//		}
-//
-//	//Case 5: test cumulative percentages for no keyed values 
-//		@Test
-//		public void testGetCumulativePercentagesWithNoKeyedValues() {
-//			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//			assertEquals(0, cumulativePercentages.getItemCount());
-//		}
-//		
-//	//Case 6: test cumulative percentages for individual value 
-//		@Test
-//		public void testCumulativePercentageForSingleKeyValue() {
-//			keyedValues.addValue("0", 5);
-//			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
-//		
-//			// 0 - 1.0 (5/5)
-//			assertEquals(1.0, cumulativePercentages.getValue(0));
-//	}
-//		
-//	//Case 7: test cumulative percentages throws invalid param exception when invalid data object passed
-//		@Test
-//		public void testCumulativePercentageThrowsExceptionOnInvalidDataObject() {
-//			try {
-//				DataUtilities.getCumulativePercentages(null);
-//				fail("No exception thrown. The expected outcome was: a thrown "
-//			    		+ "exception of type: InvalidParameterException");
-//			} catch (Exception e) {
-//				assertTrue("Incorrect exception type thrown",  
-//					    e.getClass().equals(InvalidParameterException.class));
-//			}
-//		}
+	// ****** Method 3 - Tests for Create Number Array *****************
+
+	// Case 1: Test creating an empty number array 
+	@Test
+	public void testCreateNumberArrayWithEmptyArray() {
+		double[] values = new double[] {};
+		Number[] numberArr = DataUtilities.createNumberArray(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(0, numberArr.length);
+	}
+	
+	// Case 2: Testing creating number array with a single value
+	@Test
+	public void testCreateNumberArrayWithSingleValue() {
+		double[] values = new double[] {0.0};
+		Number[] numberArr = DataUtilities.createNumberArray(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for(int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i], numberArr[i]);
+		}
+	}
+	
+	// Case 3: Testing creating number array with positive values 
+	@Test
+	public void testCreateNumberArrayWithMultiplePositiveValues() {
+		double[] values = new double[] {0.0, 1.0, 2.0, 3.0};
+		Number[] numberArr = DataUtilities.createNumberArray(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for(int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i], numberArr[i]);
+		}
+	}
+	
+	// Case 4: Testing creating number array with negative values 
+	@Test
+	public void testCreateNumberArrayWithMultipleNegativeValues() {
+		double[] values = new double[] {-1.0, -2.0, -3.0, -4.0};
+		Number[] numberArr = DataUtilities.createNumberArray(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for(int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i], numberArr[i]);
+		}
+	}
+	
+	// Case 5: Testing creating number array with negative and positive values 
+	@Test
+	public void testCreateNumberArrayWithMultipleNegativeAndPositiveValues() {
+		double[] values = new double[] {1.0, -2.0, 3.0, -4.0};
+		Number[] numberArr = DataUtilities.createNumberArray(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for(int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i], numberArr[i]);
+		}
+	}
+	
+	// Case 6: Testing creating a number array with null object throws Invalid Parameter Exception
+	@Test
+	public void testCreateNumberArrayWithNullObjectThrowsException() {
+		try {
+			DataUtilities.createNumberArray(null);
+			fail("No exception thrown. The expected outcome was: a thrown "
+		    		+ "exception of type: InvalidParameterException");
+		} catch (Exception e) {
+			assertTrue("Incorrect exception type thrown",  
+				    e.getClass().equals(InvalidParameterException.class));
+		}
+	}
+	
+
+	// ****** Method 4 - Tests for Create Number Array 2D *****************
+
+	// Case 1: Test creating an empty number array 
+	@Test
+	public void testCreate2DNumberArrayWithEmptyArray() {
+		double[][] values = new double[][] {{}, {}};
+		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(2, numberArr.length);
+	}
+	
+	// Case 2: Test creating 2D number array with multiple positive values 
+	@Test
+	public void testCreate2DNumberArrayWithMultiplePositiveValues() {
+		double[][] values = new double[][] {{0.0, 1.0, 2.0}, {3.0, 4.0, 5.0}};
+		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for (int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i].length, numberArr[i].length);
+			for (int j = 0; j < numberArr[i].length; j++) {
+				assertEquals(values[i][j], numberArr[i][j]);
+			}
+		}
+	}
+	
+	// Case 3: Test creating 2D number array with multiple negative values 
+	@Test
+	public void testCreate2DNumberArrayWithNegativeValues() {
+		double[][] values = new double[][] {{-1.0, -2.0}, {-3.0, -4.0, -5.0}};
+		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for (int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i].length, numberArr[i].length);
+			for (int j = 0; j < numberArr[i].length; j++) {
+				assertEquals(values[i][j], numberArr[i][j]);
+			}
+		}
+	}
+	
+	// Case 4: Test creating 2D number array with positive and negative values 
+	@Test
+	public void testCreate2DNumberArrayWithPositiveAndNegativeValues() {
+		double[][] values = new double[][] {{1.0, -2.0}, {-3.0, 4.0, -5.0}};
+		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for (int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i].length, numberArr[i].length);
+			for (int j = 0; j < numberArr[i].length; j++) {
+				assertEquals(values[i][j], numberArr[i][j]);
+			}
+		}
+	}
+	
+	// Case 5: Test creating 2D number array with single value
+	@Test
+	public void testCreate2DNumberArrayWithSingleValue() {
+		double[][] values = new double[][] {{0.0}};
+		Number[][] numberArr = DataUtilities.createNumberArray2D(values);
+		
+		assertNotNull(numberArr);
+		assertEquals(values.length, numberArr.length);
+		
+		for (int i = 0; i < numberArr.length; i++) {
+			assertEquals(values[i].length, numberArr[i].length);
+			for (int j = 0; j < numberArr[i].length; j++) {
+				assertEquals(values[i][j], numberArr[i][j]);
+			}
+		}
+	}
+	
+	// Case 6: Testing creating a number array with null object throws Invalid Parameter Exception
+	@Test
+	public void testCreate2DNumberArrayWithNullObjectThrowsException() {
+		try {
+			DataUtilities.createNumberArray2D(null);
+			fail("No exception thrown. The expected outcome was: a thrown "
+		    		+ "exception of type: InvalidParameterException");
+		} catch (Exception e) {
+			assertTrue("Incorrect exception type thrown",  
+				    e.getClass().equals(InvalidParameterException.class));
+		}
+	}
+	
+	// Method 5 - Tests for Get Cumulative Percentages
+	
+	//Case 1: test cumulative percentages for positive number based on javadocs example
+	@Test
+	public void testGetCumulativePercentagesPositiveNumbers() {
+		keyedValues.addValue("0", 5);
+		keyedValues.addValue("1", 9);
+		keyedValues.addValue("2", 2);
+		
+		DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
+		
+		expectedPercentages.addValue("0", 0.3125);
+		expectedPercentages.addValue("1", 0.875);
+		expectedPercentages.addValue("2", 1.0);
+		
+		KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
+
+		for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
+			assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
+			assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
+		}
+	}
+	
+	//Case 2: test cumulative percentages for negative numbers based on javadocs example
+		@Test
+		public void testGetCumulativePercentagesNegativeNumbers() {
+			keyedValues.addValue("0", -5);
+			keyedValues.addValue("1", -9);
+			keyedValues.addValue("2", -2);
+			
+			DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
+			
+			expectedPercentages.addValue("0", 0.3125);
+			expectedPercentages.addValue("1", 0.875);
+			expectedPercentages.addValue("2", 1.0);
+			
+			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
+			
+			for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
+				assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
+				assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
+			}
+		}
+		
+	//Case 3: test cumulative percentages based on a larger sample 
+		@Test
+		public void testGetCumulativePercentagesLargerSample() {
+			keyedValues.addValue("0", 5);
+			keyedValues.addValue("1", 9);
+			keyedValues.addValue("2", 2);
+			keyedValues.addValue("3", 5);
+			keyedValues.addValue("4", 9);
+			keyedValues.addValue("5", 2);
+			
+			DefaultKeyedValues expectedPercentages = new DefaultKeyedValues();
+			
+			expectedPercentages.addValue("0", 0.15625);
+			expectedPercentages.addValue("1", 0.4375);
+			expectedPercentages.addValue("2", 0.5);
+			expectedPercentages.addValue("3", 0.65625);
+			expectedPercentages.addValue("4", 0.9375);
+			expectedPercentages.addValue("5", 1.0);
+			
+			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
+
+			for (int i = 0; i < cumulativePercentages.getItemCount(); i++) {
+				assertEquals(expectedPercentages.getKey(i), cumulativePercentages.getKey(i));
+				assertEquals(expectedPercentages.getValue(i), cumulativePercentages.getValue(i));
+			}
+		}
+
+	//Case 4: test cumulative percentages for no keyed values 
+		@Test
+		public void testGetCumulativePercentagesWithNoKeyedValues() {
+			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
+			assertEquals(0, cumulativePercentages.getItemCount());
+		}
+		
+	//Case 5: test cumulative percentages for individual value 
+		@Test
+		public void testCumulativePercentageForSingleKeyValue() {
+			keyedValues.addValue("0", 5);
+			KeyedValues cumulativePercentages = DataUtilities.getCumulativePercentages(keyedValues);
+		
+			// 0 - 1.0 (5/5)
+			assertEquals(1.0, cumulativePercentages.getValue(0));
+	}
+		
+	//Case 6: test cumulative percentages throws invalid param exception when invalid data object passed
+		@Test
+		public void testCumulativePercentageThrowsExceptionOnInvalidDataObject() {
+			try {
+				DataUtilities.getCumulativePercentages(null);
+				fail("No exception thrown. The expected outcome was: a thrown "
+			    		+ "exception of type: InvalidParameterException");
+			} catch (Exception e) {
+				assertTrue("Incorrect exception type thrown",  
+					    e.getClass().equals(InvalidParameterException.class));
+			}
+		}
 }
