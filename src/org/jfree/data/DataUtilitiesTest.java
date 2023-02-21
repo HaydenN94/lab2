@@ -86,10 +86,10 @@ public class DataUtilitiesTest extends TestCase {
 		values2D.addValue(1, 0, 1);
 		values2D.addValue(5, 1, 1);
 		values2D.addValue(10, 2, 1);
-		values2D.addValue(15.6, 3, 1);
+		values2D.addValue(15, 3, 1);
 
-		double expected = 31.6;
-		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 0);
+		double expected = 31;
+		double actualColTotal = DataUtilities.calculateColumnTotal(values2D, 1);
 
 		assertEquals(expected, actualColTotal);
 	}
