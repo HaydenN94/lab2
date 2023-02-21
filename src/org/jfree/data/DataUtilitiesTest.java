@@ -189,7 +189,7 @@ public class DataUtilitiesTest extends TestCase {
 		assertEquals("Calculate row total: Didn't return expected output: ", expected, actualRowTotal);
 	}
 	
-	// Case 4: Row total is calculated for only the requested column 
+	// Case 4: Row total is calculated for only the requested row 
 	@Test
 	public void testCalculateRowTotalOnlyCalculateRequestedColumn() {
 		values2D.addValue(1, 0, 0);
@@ -202,7 +202,7 @@ public class DataUtilitiesTest extends TestCase {
 		values2D.addValue(15.3, 1, 3);
 
 		double expected = 31.3;
-		double actualRowTotal = DataUtilities.calculateRowTotal(values2D, 0);
+		double actualRowTotal = DataUtilities.calculateRowTotal(values2D, 1);
 
 		assertEquals("Calculate row total: Didn't return expected output: ", expected, actualRowTotal);
 	}
